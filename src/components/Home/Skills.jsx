@@ -155,7 +155,7 @@ const softSkills = [
     id: 4,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJFdbeOgkg-HoMLk67u7x-IdWKqhSKU1vY0A&s",
-    skillName: " proven Product Scrum Master",
+    skillName: " Proven Product Scrum Master",
     percentage: 95,
   },
 ];
