@@ -40,7 +40,6 @@ export async function sendContactUserEmail(name, email, message) {
           <p style="font-size: 16px; line-height: 1.5; color: #FFFFFF; margin-bottom: 20px;">
             <strong style="color: #55E6A5;">Dear Sahid Hossain,</strong> 
             <br/>
-            <br/>
             ${message}
           </p>
 
