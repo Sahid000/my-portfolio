@@ -37,11 +37,11 @@ export async function sendContactUserEmail(name, email, message) {
             You have received a message from <a href="mailto:${email}" style="color: #55E6A5; text-decoration: none;">${name}</a>.
           </p>
          
-          <p style="font-size: 16px; line-height: 1.5; color: #55E6A5; margin-bottom: 20px;">
-            <strong>Dear Sahid Hossain,</strong> 
+          <p style="font-size: 16px; line-height: 1.5; color: #FFFFFF; margin-bottom: 20px;">
+            <strong style="color: #55E6A5;">Dear Sahid Hossain,</strong> 
             <br/>
             <br/>
-            <div style="color: #FFFFFF>${message}</div>
+            ${message}
           </p>
 
           <hr style="border-top: 1px solid #55E6A5; background-color: #55E6A5; color: #55E6A5;" />

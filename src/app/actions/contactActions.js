@@ -9,6 +9,7 @@ export async function sendContactEmailAction({ name, email, message }) {
 
   try {
     const emailResponse = await sendContactUserEmail(name, email, message);
+    console.log(emailResponse)
     return { success: true, emailResponse };
   } catch (error) {
     return { success: false, error: "Failed to send email." };
