@@ -48,28 +48,31 @@ const AboutMe = () => {
             <p className="text-base-color/60 mb-2">
               My name is Sahid Hossain, and I'm from Dhaka. I hold a master’s
               degree from National University and a professional diploma from
-              IDB-BISEW. I bring over 7 years of experience in Software Quality
-              Assurance and Software Testing. Alongside certified as a web
-              developer and product scrum master.
+              IsDB-BISEW. I bring over 8+ years of experience in Software Quality
+              Assurance and Software Testing with a strong focus on delivering 
+              high-quality, user-centric software solutions. Alongside 
+              certified as a web developer and product scrum master.
             </p>
             <p className="text-base-color/60 mb-2">
-              Throughout my career, I’ve worked with 3 different organizations,
-              Currently, I’m working as an augmented employee at Grameenphone
-              through Mir Info System, where I conduct both manual and automated
-              testing for the MyGP app on Android and iOS platforms. My role
-              involves API testing with Postman, managing CI/CD pipelines via
-              Jenkins, Android automation with Espresso and Appium, and web
-              automation using Selenium Cucumber for the MyGP Web. I focus on
-              identifying critical bugs early to enhance user satisfaction,
-              ensuring a better user experience.
-            </p>
-            <p className="text-base-color/60 mb-2">
-              In addition to my technical expertise, I’m skilled in
-              collaborating with cross-functional teams to deliver high-quality
-              software solutions. I’m deeply committed to continuous learning
-              and refining my QA skills to keep up with industry standards.
-            </p>
+              Throughout my career, I’ve worked with 4 different organizations,
+              Currently, I’m working at Adventure Dhaka Ltd. as a Senior SQA Engineer, 
+              contributing to the Skyticket platform, an international travel booking service. 
+              My responsibilities include test planning, manual and automated testing for web, 
+              Android, and iOS platforms, and collaborating closely with the Japan team to ensure 
+              smooth execution of QA tasks. I also work with Autify for automated regression testing 
+              and have been involved in projects like airline API integration to support 
+              seamless flight bookings.
 
+              Previously, I served as an augmented QA engineer for Grameenphone's MyGP app through Mir Info System, 
+              where I conducted both manual and automated testing across mobile and web platforms. My role involved 
+              API testing with Postman, CI/CD pipeline management using Jenkins, Android automation with Espresso 
+              and web automation using Selenium Cucumber.
+              </p>
+            <p className="text-base-color/60 mb-2">
+              I take pride in identifying critical bugs early in the development cycle, improving system reliability 
+              and user satisfaction. I'm also experienced in working with cross-functional teams, mentoring junior testers,
+              and continuously sharpening my skills to stay aligned with evolving industry standards.
+            </p>
             <Link
               href="https://drive.google.com/file/d/1MHez5sR-ZpAFsASz47ixSYpz6tONVz9l/view?usp=sharing "
               target="_blank"
