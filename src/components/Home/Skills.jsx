@@ -135,28 +135,28 @@ const softSkills = [
     image:
       "https://classplusapp.com/growth/wp-content/uploads/2022/07/Importance-of-good-communication-skills-for-teachers.jpg",
     skillName: "Strong Communication",
-    percentage: 95,
+    percentage: 90,
   },
   {
     id: 2,
     image:
       "https://i.pinimg.com/736x/d4/f1/02/d4f1022d76bec06abd6d04c4c9a7d88a.jpg",
     skillName: "Teamwork",
-    percentage: 95,
+    percentage: 90,
   },
   {
     id: 3,
     image:
       "https://media.licdn.com/dms/image/C5612AQGXpSUZqSBL_Q/article-cover_image-shrink_600_2000/0/1528976925525?e=2147483647&v=beta&t=hkSt7lI4t_YK3qNavqPpQIm26N1XQEuz04Fjj0B9ZOY",
     skillName: "Attention to Detail",
-    percentage: 95,
+    percentage: 90,
   },
   {
     id: 4,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJFdbeOgkg-HoMLk67u7x-IdWKqhSKU1vY0A&s",
     skillName: " Proven Product Scrum Master",
-    percentage: 95,
+    percentage: 90,
   },
 ];
 
