@@ -5,10 +5,10 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
-const NavItems = [
-  { id: "1", name: "Blogs", route: "/blogs" },
-  { id: "2", name: "Projects", route: "/projects" },
-];
+// const NavItems = [
+//   { id: "1", name: "Blogs", route: "/blogs" },
+//   { id: "2", name: "Projects", route: "/projects" },
+// ];
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
