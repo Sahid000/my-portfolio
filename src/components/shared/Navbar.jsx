@@ -7,7 +7,7 @@ import { useState } from "react";
 
  const NavItems = [
 //   { id: "1", name: "Blogs", route: "/blogs" },
-// { id: "2", name: "Projects", route: "/projects" },
+//   { id: "2", name: "Projects", route: "/projects" },
  ];
 
 const Navbar = () => {
