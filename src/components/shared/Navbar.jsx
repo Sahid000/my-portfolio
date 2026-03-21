@@ -1,6 +1,7 @@
 "use client";
 
 import Container from "@/components/ui/Container";
+import { getResumeUrl } from "@/utils/getEnviromentVariable";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
@@ -14,7 +15,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+const resumeUrl = getResumeUrl();
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -110,7 +111,7 @@ const Navbar = () => {
           </nav>
           <div className="hidden lg:block">
             <Link
-              href="https://drive.google.com/file/d/1cyOafJCpfwyMgAot5Td-u4LQZ4Oq7vJm/view?usp=sharing"
+              href={resumeUrl}
               target="_blank"
             >
               <button className="!text-sm text-nowrap border px-3 py-1.5 rounded bg-secondary-color border-secondary-color text-primary-color duration-500">

@@ -6,6 +6,7 @@ import Container from "../ui/Container";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
+import { getResumeUrl } from "@/utils/getEnviromentVariable";
 
 const aboutImage = {
   initial: { y: 0 },
@@ -24,6 +25,10 @@ const aboutImage = {
 };
 
 const AboutMe = () => {
+
+  const resumeUrl = getResumeUrl();
+
+
   const view = useRef(null);
   const inView = useInView(view);
   return (
@@ -71,7 +76,7 @@ const AboutMe = () => {
             </p>
 
             <Link
-              href="https://drive.google.com/file/d/1MHez5sR-ZpAFsASz47ixSYpz6tONVz9l/view?usp=sharing "
+              href={resumeUrl}
               target="_blank"
             >
               <button className="bg-transparent border-2 px-4 py-2 rounded mt-5 hover:bg-secondary-color border-secondary-color text-secondary-color hover:text-primary-color duration-500">

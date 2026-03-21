@@ -12,6 +12,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import Revel from "../ui/Animation/Revel";
+import { getResumeUrl } from "@/utils/getEnviromentVariable";
 
 const intro = {
   hidden: { opacity: 1 },
@@ -58,7 +59,13 @@ const icon2 = {
   },
 };
 
+
+
 const Banner = () => {
+
+  const resumeUrl = getResumeUrl();
+
+
   return (
     <div className="bg-background-color w-full py-20 min-h-[100vh] overflow-hidden flex flex-col items-center justify-center">
       <Container>
@@ -159,7 +166,7 @@ const Banner = () => {
                   <motion.div variants={introChildren}>
                     {" "}
                     <Link
-                      href="https://drive.google.com/file/d/1cyOafJCpfwyMgAot5Td-u4LQZ4Oq7vJm/view?usp=sharing"
+                      href={resumeUrl}
                       target="_blank"
                     >
                       <button className="bg-transparent border-2 border-secondary-color px-4 py-2 rounded mt-5 text-base-color hover:bg-secondary-color hover:border-secondary-color hover:text-primary-color duration-500">
