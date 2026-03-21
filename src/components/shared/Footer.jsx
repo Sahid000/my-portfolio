@@ -98,8 +98,7 @@ const Footer = () => {
             <div className="flex justify-center py-8 text-lg">
               © Copyright {currentYear} by{" "}
               <span className="font-extrabold text-lg text-secondary-color underline ps-2">
-                {" "}
-                Shahid Hossain
+                Sahid Hossain
               </span>
             </div>
           </Container>

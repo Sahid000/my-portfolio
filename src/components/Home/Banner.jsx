@@ -94,7 +94,7 @@ const Banner = () => {
                     <span className="text-base-color">
                       {" "}
                       <Typewriter
-                        words={["SQA Engineer"]}
+                        words={["Sr. SQA Engineer"]}
                         loop={100}
                         cursor
                         cursorStyle="_"

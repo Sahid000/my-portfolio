@@ -33,7 +33,7 @@ const records = [
   {
     title: "Secondary School Certificate -SSC in Business Studies",
     institute: "Dharmarajika Orphanage Residential High School",
-    year: "2008",
+    year: "2006",
     gpa: "4.1 out of 5",
     certificate:
       "https://drive.google.com/file/d/1BJG3mexaHfs9JS48CUoagRqCarpJlIKb/view?usp=sharing",
