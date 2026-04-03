@@ -51,12 +51,14 @@ const AboutMe = () => {
               <div className="w-48 h-1 bg-secondary rounded "></div>
             </div>
             <p className="text-base-color/60 mb-2">
-              My name is Sahid Hossain, and I'm from Dhaka. I hold a master’s
-              degree from National University and a professional diploma from
-              IsDB-BISEW. I bring over 8+ years of experience in Software Quality
-              Assurance and Software Testing with a strong focus on delivering 
+              My name is Sahid Hossain, and I am based in Dhaka. I hold a master’s
+              degree from National University and a Professional Diploma from
+              IsDB-BISEW. With over 9+ years of experience in Software Quality
+              Assurance and Software Testing, I specialize in delivering 
               high-quality, user-centric software solutions. Alongside 
-              certified as a web developer and product scrum master.
+              I am an ISTQB CTFL (v4.0) certified tester, and also certified in Web Development 
+              and Product Scrum Master, which enables me to contribute effectively across 
+              both technical and Agile environments.
             </p>
             <p className="text-base-color/60 mb-2">
               Throughout my career, I’ve worked with 4 different organizations,
@@ -68,10 +70,10 @@ const AboutMe = () => {
               and have been involved in projects like airline API integration to support 
               seamless flight bookings.
 
-              Previously, I served as an augmented QA engineer for Grameenphone's MyGP app through Mir Info System, 
+              Previously, I served as an augmented Senior SQA engineer for Grameenphone's MyGP app through Mir Info System, 
               where I conducted both manual and automated testing across mobile and web platforms. My role involved 
-              API testing with Postman, CI/CD pipeline management using Jenkins, Android automation with Espresso 
-              and web automation using Selenium Cucumber.
+              API testing strategy for microservices that reduced integration bugs with Postman, CI/CD pipeline management 
+              using Jenkins, Android automation with Espresso and web automation using Selenium Cucumber.
               </p>
             <p className="text-base-color/60 mb-2">
               I take pride in identifying critical bugs early in the development cycle, improving system reliability 
