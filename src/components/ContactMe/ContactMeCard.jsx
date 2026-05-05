@@ -73,7 +73,7 @@ const ContactMeCard = () => {
           <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
         </svg>
         <h2 className="text-xl  font-bold group-hover:text-primary-color ">
-          Gmail
+          Email
         </h2>
         <p className="text-sm group-hover:text-highlight-color ">
           Feel free to contact me via email for any inquiries, collaborations,

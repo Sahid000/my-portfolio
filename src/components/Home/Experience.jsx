@@ -58,8 +58,10 @@ const experience = [
     role: "Software Quality Assurance Engineer",
     date: "Jan 2017 - May 2021",
     points: [
-      "Conducted manual testing (functional, regression, UI, etc.) to ensure high-quality software delivery.",
-      "Implemented automation using Selenium TestNG reducing testing efforts.",
+      "Conducted manual testing (Functional, Non-functional, Black-Box, Regression, UI, Negative, Smoke, Sanity, Compatibility, Security Testing, and Error Guessing etc.) to ensure high-quality software delivery.",
+      "Prevented defects and tracked bugs/issues using JIRA, fostering continuous improvement",
+      "Automated tests using tools like Selenium WebDriver, JMeter, Postman, and SQL queries.",
+      "Developed detailed test plans and cases for new and existing features, focusing on front-end testing.",
       "Performed mobile responsiveness testing on BrowserStack and Genymotion.",
       "Worked with Project Managers and Developers to optimize issue resolution and defect prevention.",
       "Tracked and managed bugs in JIRA for efficient issue handling.",
