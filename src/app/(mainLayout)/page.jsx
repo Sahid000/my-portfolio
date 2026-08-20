@@ -6,6 +6,7 @@ import Experience from "@/components/Home/Experience";
 import RecentVlog from "@/components/Home/RecentVlog";
 import Skills from "@/components/Home/Skills";
 import Testimonial from "@/components/Home/Testimonial";
+import Certifications from "@/components/Home/Certifications";
 import React from "react";
 
 const page = () => {
@@ -17,6 +18,7 @@ const page = () => {
       <AcademicRecords />
       <Skills />
       {/* <Testimonial /> */}
+      <Certifications />
       <ContactMe />
     </div>
   );
