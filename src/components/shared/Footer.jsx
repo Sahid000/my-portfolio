@@ -15,7 +15,7 @@ const Footer = () => {
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <div className="lg:fixed lg:bottom-0 h-auto w-full">
-        <footer className="pt-16 pb-5 bg-primary-color text-base-color">
+        <footer className="pt-16 pb-5 bg-primary-color text-content-primary border-t border-line-subtle">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:justify-items-center items-start pt-20">
               <div className="mb-5">
@@ -24,18 +24,18 @@ const Footer = () => {
                     href="/"
                     className="text-2xl cursor-pointer flex justify-start items-center gap-1 mb-1"
                   >
-                    <span className="text-2xl font-semibold text-secondary-color ">
-                      <span className="text-base-color font-extrabold text-2xl italic">
+                    <span className="font-display text-lg sm:text-xl text-accent tracking-display">
+                      <span className="text-content-primary/50 text-lg sm:text-xl">
                         {"< "}
                       </span>
                       SahidHossain
-                      <span className="text-base-color font-extrabold text-2xl italic">
+                      <span className="text-content-primary/50 text-lg sm:text-xl">
                         {" />"}
                       </span>
                     </span>
                   </Link>
                 </div>
-                <p>
+                <p className="text-sm text-content-muted max-w-prose mt-4">
                   I am a dedicated and results-driven professional with a robust
                   academic background in Enterprise System Analysis & Design
                   (C#.Net) and a Master’s degree in Business Studies. Leveraging
@@ -46,58 +46,58 @@ const Footer = () => {
                 </p>
               </div>
               <div className="mb-5 lg:mb-0 place-self-end">
-                <h1 className="text-xl font-bold mb-3 text-secondary-color">
+                <h1 className="text-lg mb-4 text-content-secondary tracking-display">
                   Contact Me
                 </h1>
-                <ul>
+                <ul className="text-sm text-content-muted">
                   <li className="mb-2">
                     R.K. Mission Road Gopibag 3th Lane, Dhaka, Bangladesh
                   </li>
                   <li className="mb-2">
                     Phone:{" "}
-                    <span className="font-bold text-secondary-color">
+                    <span className="font-semibold text-accent">
                       +8801677266742
                     </span>
                   </li>
                   <li className="mb-2">
                     {" "}
                     Email:{" "}
-                    <span className="font-bold text-secondary-color">
+                    <span className="font-semibold text-accent break-all">
                       sahidhossain000@outlook.com
                     </span>
                   </li>
                   <li className="mb-2">
                     <div className="flex justify-start items-center gap-5 my-5">
                       <Link href="https://github.com/Sahid000" target="_blank">
-                        <FaGithub className="text-secondary-color cursor-pointer  text-2xl" />
+                        <FaGithub className="text-content-muted hover:text-accent transition-colors duration-300 cursor-pointer text-2xl" />
                       </Link>
                       <Link
                         href="https://www.linkedin.com/in/shahid06/"
                         target="_blank"
                       >
-                        <FaLinkedin className="text-secondary-color cursor-pointer text-2xl" />
+                        <FaLinkedin className="text-content-muted hover:text-accent transition-colors duration-300 cursor-pointer text-2xl" />
                       </Link>
                       <Link
                         href="https://www.facebook.com/hassan.shahid.50/"
                         target="_blank"
                       >
-                        <FaFacebook className="text-secondary-color cursor-pointer  text-2xl" />
+                        <FaFacebook className="text-content-muted hover:text-accent transition-colors duration-300 cursor-pointer text-2xl" />
                       </Link>
                       <Link
                         href="https://www.instagram.com/hassan_shahid77/"
                         target="_blank"
                       >
-                        <FaInstagramSquare className="text-secondary-color cursor-pointer text-2xl" />
+                        <FaInstagramSquare className="text-content-muted hover:text-accent transition-colors duration-300 cursor-pointer text-2xl" />
                       </Link>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
-            <hr className="w-10/12 mx-auto mt-20 text-primary-color bg-secondary border-secondary" />
-            <div className="flex justify-center py-8 text-lg">
+            <hr className="w-10/12 mx-auto mt-20 h-px border-0 rule-fade" />
+            <div className="flex flex-wrap justify-center py-8 text-sm text-content-muted">
               © Copyright {currentYear} by{" "}
-              <span className="font-extrabold text-lg text-secondary-color underline ps-2">
+              <span className="font-semibold text-sm text-accent underline decoration-accent/40 underline-offset-4 ps-2">
                 Sahid Hossain
               </span>
             </div>

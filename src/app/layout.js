@@ -1,7 +1,21 @@
-import { Inter } from "next/font/google";
+import { Michroma, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// font.family.primary — display face. Michroma ships weight 400 only.
+const michroma = Michroma({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-display",
+});
+
+// Body face. Michroma is display-only, so long-form copy runs on a grotesk.
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-body",
+});
 
 export const metadata = {
   title: "Sahid Hossain",
@@ -10,8 +24,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${michroma.variable} ${spaceGrotesk.variable}`}
+    >
+      <body className={spaceGrotesk.className}>{children}</body>
     </html>
   );
 }

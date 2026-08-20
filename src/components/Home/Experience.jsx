@@ -78,9 +78,9 @@ const experience = [
 
 const Experience = () => {
   return (
-    <div className="py-20 bg-background-color overflow-hidden">
+    <div className="py-24  overflow-hidden">
       <div className="mb-10 flex justify-center items-center flex-col">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl  font-bold place-items-start text-secondary-color mb-5">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl  place-items-start text-content-secondary tracking-display mb-5 text-center px-4">
           Experience
         </h1>
 

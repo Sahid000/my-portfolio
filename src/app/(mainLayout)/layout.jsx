@@ -5,7 +5,7 @@ import { Toaster } from "sonner";
 const MainLayout = ({ children }) => {
   return (
     <div>
-      <div className="bg-primary-color">
+      <div className="app-shell">
         <div className="fixed top-0 z-50 w-full">
           <Navbar />
         </div>

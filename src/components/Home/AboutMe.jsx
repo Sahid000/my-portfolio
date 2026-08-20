@@ -44,13 +44,13 @@ const AboutMe = () => {
           className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-10 lg:gap-y-0 gap-x-0 lg:gap-x-10 items-stretch justify-stretch my-10"
         >
           <div className="xl:col-span-2">
-            <div className=" mb-5">
-              <h1 className=" text-secondary-color text-3xl mb-1 font-bold">
+            <div className=" mb-8">
+              <h1 className=" text-content-secondary text-3xl mb-4 tracking-display">
                 About Me :
               </h1>
-              <div className="w-48 h-1 bg-secondary rounded "></div>
+              <div className="w-48 h-px rule-fade rounded "></div>
             </div>
-            <p className="text-base-color/60 mb-2">
+            <p className="text-content-muted text-sm leading-relaxed mb-4">
               My name is Sahid Hossain, and I am based in Dhaka. I hold a master’s
               degree from National University and a Professional Diploma from
               IsDB-BISEW. With over 9+ years of experience in Software Quality
@@ -60,7 +60,7 @@ const AboutMe = () => {
               and Product Scrum Master, which enables me to contribute effectively across 
               both technical and Agile environments.
             </p>
-            <p className="text-base-color/60 mb-2">
+            <p className="text-content-muted text-sm leading-relaxed mb-4">
               Throughout my career, I’ve worked with 4 different organizations,
               Currently, I’m working at Adventure Dhaka Ltd. as a Senior SQA Engineer, 
               contributing to the Skyticket platform, an international travel booking service. 
@@ -75,7 +75,7 @@ const AboutMe = () => {
               API testing strategy for microservices that reduced integration bugs with Postman, CI/CD pipeline management 
               using Jenkins, Android automation with Espresso and web automation using Selenium Cucumber.
               </p>
-            <p className="text-base-color/60 mb-2">
+            <p className="text-content-muted text-sm leading-relaxed mb-4">
               I take pride in identifying critical bugs early in the development cycle, improving system reliability 
               and user satisfaction. I'm also experienced in working with cross-functional teams, mentoring junior testers,
               and continuously sharpening my skills to stay aligned with evolving industry standards.
@@ -84,7 +84,7 @@ const AboutMe = () => {
               href={resumeUrl}
               target="_blank"
             >
-              <button className="bg-transparent border-2 px-4 py-2 rounded mt-5 hover:bg-secondary-color border-secondary-color text-secondary-color hover:text-primary-color duration-500">
+              <button className="bg-transparent border border-accent/60 px-6 py-3 rounded-full mt-5 text-sm font-semibold tracking-wide hover:bg-accent text-accent hover:text-content-inverse hover:shadow-glow active:scale-[0.97] transition-all duration-instant">
                 My Resume
               </button>
             </Link>
@@ -95,14 +95,14 @@ const AboutMe = () => {
             animate="animate"
             className="relative "
           >
-            <div className="!rounded w-fit  h-fit mx-auto  overflow-hidden border-2 border-secondary-color">
+            <div className="!rounded-2xl w-fit  h-fit mx-auto  overflow-hidden border border-accent/40 shadow-glow-lg bg-surface-raised">
               <Image
                 src="/img/myProfile.jpg"
                 alt="my-image"
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-auto min-h-[400px] h-full mx-auto p-2 !rounded object-cover object-center"
+                className="w-auto min-h-[400px] h-full mx-auto p-2 !rounded-2xl object-cover object-center"
               />
             </div>
           </motion.div>

@@ -5,7 +5,7 @@ const AnimatedUnderline = ({ className = "" }) => {
   return (
     <div>
       <motion.p
-        className={cn("w-32 h-1 rounded-xl bg-secondary-color", className)}
+        className={cn("w-32 h-[2px] rounded-xl rule-fade", className)}
         initial={{ x: -20 }}
         animate={{ x: 20 }}
         transition={{

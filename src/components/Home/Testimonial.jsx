@@ -61,7 +61,7 @@ const Testimonial = () => {
   return (
     <motion.div ref={ref} className="py-20 overflow-hidden">
       <div className="my-10 flex justify-center items-center flex-col">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl  font-bold place-items-start text-base-color mb-5">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl  place-items-start text-content-secondary tracking-display mb-5 text-center px-4">
           Testimonials
         </h1>
 
@@ -74,7 +74,7 @@ const Testimonial = () => {
             initial={{ x: -100, opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
             transition={{ duration: 1.5 }}
-            className="hidden lg:block w-full lg:w-1/5 min-h-[687px] bg-[#19363D]"
+            className="hidden lg:block w-full lg:w-1/5 min-h-[687px] bg-accent/20 rounded-2xl"
           ></motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -111,10 +111,10 @@ const Testimonial = () => {
               ))}
             </Swiper>
             {/* Custom Navigation Buttons */}
-            <div className="custom-prev absolute top-[50%] left-4 z-10 cursor-pointer text-[#19363D] text-2xl bg-[#D3EBE7] rounded py-1 px-2 -ml-3 md:ml-0">
+            <div className="custom-prev absolute top-[50%] left-4 z-10 cursor-pointer text-accent hover:text-content-inverse hover:bg-accent text-2xl bg-surface-raised border border-line-subtle transition-colors duration-300 rounded-full py-1 px-2 -ml-3 md:ml-0">
               <GoArrowLeft />
             </div>
-            <div className="custom-next absolute top-[50%] right-4 z-10 cursor-pointer text-[#19363D] text-2xl bg-[#D3EBE7] rounded py-1 px-2 -mr-3 md:mr-0">
+            <div className="custom-next absolute top-[50%] right-4 z-10 cursor-pointer text-accent hover:text-content-inverse hover:bg-accent text-2xl bg-surface-raised border border-line-subtle transition-colors duration-300 rounded-full py-1 px-2 -mr-3 md:mr-0">
               <GoArrowRight />
             </div>
           </motion.div>

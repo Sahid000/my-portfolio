@@ -43,7 +43,7 @@ const ContactFrom = () => {
         onSubmit={handleSubmit(onFinish)}
       >
         <div className="mb-5">
-          <label className="flex items-center text-foreground">
+          <label className="flex items-center gap-2 eyebrow text-xs text-content-muted">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -54,7 +54,7 @@ const ContactFrom = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-captions text-secondary-color"
+              className="lucide lucide-captions text-accent shrink-0"
             >
               <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
@@ -67,11 +67,11 @@ const ContactFrom = () => {
             name="name"
             placeholder="Enter Your Name"
             required
-            className="border border-secondary-color/50 bg-transparent text-base-color placeholder:!text-base-color/50 focus:ring-secondary-color/50 p-2 outline-none w-full mt-3 rounded"
+            className="border border-line-subtle bg-surface-raised text-sm text-content-primary placeholder:!text-content-muted hover:border-accent/50 focus:border-accent p-3 outline-none w-full mt-3 rounded-xl transition-colors duration-300"
           />
         </div>
         <div className="mb-5">
-          <label className="flex items-center text-foreground">
+          <label className="flex items-center gap-2 eyebrow text-xs text-content-muted">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -82,7 +82,7 @@ const ContactFrom = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-captions text-secondary-color"
+              className="lucide lucide-captions text-accent shrink-0"
             >
               <rect width="20" height="16" x="2" y="4" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
@@ -95,12 +95,12 @@ const ContactFrom = () => {
             name="email"
             placeholder="Enter Your Email"
             required
-            className="border border-secondary-color/50 bg-transparent text-base-color placeholder:!text-base-color/50 focus:ring-secondary-color/50 p-2 outline-none w-full mt-3 rounded"
+            className="border border-line-subtle bg-surface-raised text-sm text-content-primary placeholder:!text-content-muted hover:border-accent/50 focus:border-accent p-3 outline-none w-full mt-3 rounded-xl transition-colors duration-300"
           />
         </div>
 
         <div className="mb-5 col-span-2">
-          <label className="flex items-center text-foreground">
+          <label className="flex items-center gap-2 eyebrow text-xs text-content-muted">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -111,7 +111,7 @@ const ContactFrom = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-receipt-text text-secondary-color"
+              className="lucide lucide-receipt-text text-accent shrink-0"
             >
               <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" />
               <path d="M14 8H8" />
@@ -125,11 +125,11 @@ const ContactFrom = () => {
             name="message"
             placeholder="Enter Your Message"
             required
-            className="h-40 border border-secondary-color/50 bg-transparent text-base-color placeholder:!text-base-color/50 focus:ring-secondary-color/50 p-2 outline-none w-full mt-3 rounded"
+            className="h-40 border border-line-subtle bg-surface-raised text-sm text-content-primary placeholder:!text-content-muted hover:border-accent/50 focus:border-accent p-3 outline-none w-full mt-3 rounded-xl transition-colors duration-300 resize-y"
           />
         </div>
         <div className=" mt-6 col-span-2">
-          <button className="w-full flex items-center justify-center border px-4 py-2 rounded mt-5 bg-secondary-color border-secondary-color text-primary-color duration-500">
+          <button className="w-full flex items-center justify-center gap-2 border px-6 py-3.5 rounded-full mt-5 text-sm font-semibold tracking-wide bg-accent border-accent text-content-inverse hover:bg-accent-strong hover:border-accent-strong hover:shadow-glow active:scale-[0.99] transition-all duration-instant">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

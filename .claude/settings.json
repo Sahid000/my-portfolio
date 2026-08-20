@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npm run build 2>&1)",
+      "PowerShell(npm run build 2>&1 | Select-String \"Compiled successfully|Failed to compile\" ; Start-Process -FilePath \"npm\" -ArgumentList \"run\",\"start\" -NoNewWindow -RedirectStandardOutput \"$env:TEMP\\\\pf-out.log\" -RedirectStandardError \"$env:TEMP\\\\pf-err.log\"; Start-Sleep -Seconds 12; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 30; Write-Output \"STATUS: $\\($r.StatusCode\\)  LENGTH: $\\($r.Content.Length\\)\"; $h=$r.Content; foreach\\($t in 'Michroma','app-shell','Sahid Hossain','My Expertise Skills','My Credentials','font-display'\\){ $n=\\([regex]::Matches\\($h,[regex]::Escape\\($t\\)\\)\\).Count; Write-Output \\(\"  {0,-22} {1}\" -f $t,$n\\) } } catch { Write-Output \"REQ FAILED: $_\" })",
+      "Bash(PORT=3100 npx next start -p 3100)",
+      "Bash(npx --yes kill-port 3100)",
+      "PowerShell(git --no-pager diff -U2 src/components/Home/Banner.jsx src/components/shared/Footer.jsx)"
+    ]
+  }
+}

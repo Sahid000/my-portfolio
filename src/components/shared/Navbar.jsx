@@ -38,11 +38,15 @@ const resumeUrl = getResumeUrl();
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`z-[999] text-base-color ${
+      className={`z-[999] text-content-primary ${
         scrolled
-          ? "bg-primary-color py-0 transition-all duration-500 shadow"
-          : "!bg-transparent !shadow-none py-1 transition-all duration-500"
-      } ${mobileMenuOpen ? "shadow-none !bg-primary-color" : ""}`}
+          ? "bg-surface-base/70 backdrop-blur-xl border-b border-line-subtle py-0 transition-all duration-500 shadow-panel"
+          : "!bg-transparent !shadow-none border-b border-transparent py-1 transition-all duration-500"
+      } ${
+        mobileMenuOpen
+          ? "shadow-none !bg-surface-base/95 !backdrop-blur-xl"
+          : ""
+      }`}
     >
       <Container>
         <header className="w-full py-3 flex justify-between items-center z-50 ">
@@ -52,12 +56,12 @@ const resumeUrl = getResumeUrl();
               href="/"
               className="text-nowrap cursor-pointer flex justify-center items-end"
             >
-              <span className="text-2xl font-semibold text-secondary-color ">
-                <span className="text-base-color font-extrabold text-2xl italic">
+              <span className="font-display text-lg sm:text-xl text-accent tracking-display">
+                <span className="text-content-primary/50 text-lg sm:text-xl">
                   {"< "}
                 </span>
                 SahidHossain
-                <span className="text-base-color font-extrabold text-2xl italic">
+                <span className="text-content-primary/50 text-lg sm:text-xl">
                   {" />"}
                 </span>
               </span>
@@ -67,7 +71,7 @@ const resumeUrl = getResumeUrl();
           <nav
             className={
               mobileMenuOpen
-                ? " w-full lg:w-fit lg:static absolute top-[50px] left-0 lg:bg-none bg-primary-color transition-all lg:z-0 -z-50 lg:border-none shadow-md"
+                ? " w-full lg:w-fit lg:static absolute top-[50px] left-0 lg:bg-none bg-surface-base/95 backdrop-blur-xl transition-all lg:z-0 -z-50 lg:border-none border-b border-line-subtle shadow-panel"
                 : " w-full lg:w-fit lg:static absolute top-[-550px] left-0 transition-all lg:z-0 -z-50"
             }
           >
@@ -77,7 +81,7 @@ const resumeUrl = getResumeUrl();
                 {NavItems.map((navItem) => (
                   <li
                     key={navItem.id}
-                    className="lg:mb-0 mb-5 cursor-pointer  group relative text-secondary-color hover:text-base-color transition-all duration-300"
+                    className="lg:mb-0 mb-5 cursor-pointer  group relative text-content-primary hover:text-accent-strong transition-all duration-300"
                   >
                     <Link
                       href={navItem.route}
@@ -96,7 +100,7 @@ const resumeUrl = getResumeUrl();
                   <li
                     key={navItem.id}
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    className="lg:mb-0 mb-5 cursor-pointer  group relative text-secondary-color hover:text-base-color transition-all duration-300"
+                    className="lg:mb-0 mb-5 cursor-pointer  group relative text-content-primary hover:text-accent-strong transition-all duration-300"
                   >
                     <Link
                       href={navItem.route}
@@ -114,7 +118,7 @@ const resumeUrl = getResumeUrl();
               href={resumeUrl}
               target="_blank"
             >
-              <button className="!text-sm text-nowrap border px-3 py-1.5 rounded bg-secondary-color border-secondary-color text-primary-color duration-500">
+              <button className="!text-xs text-nowrap border px-5 py-2 rounded-full bg-accent border-accent text-content-inverse font-semibold tracking-wide duration-instant transition-all hover:bg-accent-strong hover:border-accent-strong hover:shadow-glow active:scale-[0.97]">
                 My Resume
               </button>
             </Link>
@@ -122,7 +126,13 @@ const resumeUrl = getResumeUrl();
           {/* //*Icons */}
           <div className="lg:hidden select-none">
             {mobileMenuOpen ? (
-              <div onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              <button
+                type="button"
+                aria-label="Close menu"
+                aria-expanded="true"
+                className="text-accent hover:text-accent-strong transition-colors duration-300 rounded p-1"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -137,9 +147,15 @@ const resumeUrl = getResumeUrl();
                     d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                   />
                 </svg>
-              </div>
+              </button>
             ) : (
-              <div onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              <button
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                className="text-accent hover:text-accent-strong transition-colors duration-300 rounded p-1"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -154,7 +170,7 @@ const resumeUrl = getResumeUrl();
                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                   />
                 </svg>
-              </div>
+              </button>
             )}
           </div>
         </header>

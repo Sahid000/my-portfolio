@@ -2,6 +2,236 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  scroll-behavior: smooth;
+@layer base {
+  /* ---------------------------------------------------------------
+     Design tokens (DESIGN.md / SKILL.md).
+     Mirrored here for raw CSS; Tailwind consumes them via tailwind.config.js.
+     --------------------------------------------------------------- */
+  :root {
+    /* ---------------------------------------------------------------
+       Premium Dark / Electric Theme
+       --------------------------------------------------------------- */
+
+    --surface-base: #05060a;
+    --surface-muted: 11 15 23; /* #0B0F17 */
+    --surface-raised: 17 24 39; /* #111827 */
+    --surface-overlay: #0f172a;
+
+    --content-primary: #f8fafc;
+    --content-secondary: #ffffff;
+    --content-muted: #94a3b8;
+
+    --border-default: #1e293b;
+    --border-subtle: #172033;
+
+    /* Electric cyan */
+    --accent: 34 211 238; /* #22D3EE */
+
+    /* Violet */
+    --accent-soft: 139 92 246; /* #8B5CF6 */
+
+    /* Bright cyan */
+    --accent-strong: #67e8f9;
+
+    --space-1: 4px;
+    --space-2: 20px;
+
+    --duration-instant: 800ms;
+
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--surface-base);
+    color: var(--content-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    /* Never let the browser fake a weight the family does not ship. */
+    font-synthesis: none;
+    font-synthesis-weight: none;
+  }
+
+  /* Display typography.
+     Michroma is reserved for h1 and anything opted in with .font-display —
+     it is ~40% wider than a text face, so body copy and card titles stay on
+     the grotesk to protect readability and line length. */
+  h1,
+  .font-display {
+    font-family: var(--font-display), Michroma, ui-sans-serif, system-ui,
+      sans-serif;
+    /* Michroma has a single weight. `font-synthesis: none` on body keeps the
+       existing font-bold / font-extrabold utilities from faking a heavier cut;
+       this just makes the intent explicit. */
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+  }
+
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  /* Long unbroken strings (URLs, certificate titles) must not force a
+     horizontal scrollbar on narrow viewports. */
+  p,
+  li {
+    overflow-wrap: break-word;
+  }
+
+  /* ---------------------------------------------------------------
+     Focus-visible — WCAG 2.2 AA. Every interactive element must expose a
+     visible focus ring. --accent-strong (#f0abfc) sits at 10.6:1 on
+     --surface-muted and 12:1 on --surface-base.
+     --------------------------------------------------------------- */
+  :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--accent-strong);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Only suppress the default ring for pointer focus, never for keyboard. */
+  :where(a, button, input, textarea, select):focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  ::selection {
+    background-color: rgb(var(--accent) / 0.3);
+    color: #ffffff;
+  }
+
+  /* Scrollbar tuned to the surface palette. */
+  * {
+    scrollbar-color: rgb(var(--accent) / 0.45) transparent;
+    scrollbar-width: thin;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--surface-base);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      rgb(var(--accent) / 0.7),
+      rgb(var(--accent-soft) / 0.7)
+    );
+    border-radius: 999px;
+    border: 2px solid var(--surface-base);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      180deg,
+      rgb(var(--accent) / 0.95),
+      rgb(var(--accent-soft) / 0.95)
+    );
+  }
+}
+
+@layer components {
+  /**
+   * Ambient shell.
+   *
+   * Carries the page ground colour plus the violet/fuchsia bloom and the
+   * diagonal hairline texture. `background-attachment: fixed` anchors the
+   * bloom to the viewport so it behaves like a backdrop rather than scrolling
+   * away, while background-color stays fully opaque — the footer reveal
+   * depends on this element occluding the fixed footer beneath it.
+   *
+   * Section surfaces stacked on top (bg-background-color / bg-highlight-color)
+   * carry alpha, so the bloom reads through them.
+   */
+  .app-shell {
+    background-color: var(--surface-base);
+
+    background-image:
+      /* Main violet glow */
+      radial-gradient(
+        55rem 45rem at 82% 5%,
+        rgb(var(--accent-soft) / 0.20),
+        transparent 65%
+      ),
+      /* Cyan glow on the left */
+      radial-gradient(
+        48rem 42rem at 5% 35%,
+        rgb(var(--accent) / 0.12),
+        transparent 62%
+      ),
+      /* Bottom atmospheric glow */
+      radial-gradient(
+        65rem 50rem at 60% 100%,
+        rgb(var(--accent-soft) / 0.12),
+        transparent 68%
+      ),
+      /* Very subtle cyan center glow */
+      radial-gradient(
+        35rem 30rem at 50% 50%,
+        rgb(var(--accent) / 0.035),
+        transparent 70%
+      ),
+      /* Fine futuristic grid */
+      repeating-linear-gradient(
+        115deg,
+        rgb(255 255 255 / 0.025) 0 1px,
+        transparent 1px 10px
+      );
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  /* `background-attachment: fixed` repaints badly on mobile Safari/Chrome. */
+  @media (max-width: 767px) {
+    .app-shell {
+      background-attachment: scroll;
+      background-size: 100% 100vh;
+    }
+  }
+
+  /* Small caps label used for eyebrows and metadata chips. */
+  .eyebrow {
+    font-family: var(--font-display), Michroma, ui-sans-serif, sans-serif;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* Hairline rule that fades out at both ends, matching the reference. */
+  .rule-fade {
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgb(var(--accent) / 0.65),
+      rgb(var(--accent-soft) / 0.5),
+      transparent
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

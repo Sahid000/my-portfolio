@@ -12,7 +12,7 @@ const BlogCard = ({ item }) => {
     <motion.div
       style={style}
       ref={componentRef}
-      className="bg-white  rounded-lg shadow p-4  hover:shadow-lg transition-shadow duration-300 border border-[#E6E7E6"
+      className="bg-surface-raised  rounded-2xl shadow-panel p-4  hover:shadow-glow hover:border-accent/40 transition-all duration-instant border border-line-subtle"
     >
       <Image
         src={item.image}
@@ -23,15 +23,15 @@ const BlogCard = ({ item }) => {
         className="w-full h-[250px] object-cover   rounded-lg"
       />
 
-      <div className="flex items-center text-base-color text-sm mb-3 mt-6">
-        <GoClock className="mr-2 text-secondary-color size-5" />
+      <div className="flex items-center text-content-muted text-xs eyebrow mb-3 mt-6">
+        <GoClock className="mr-2 text-accent size-5" />
         <span>{item.date}</span>
       </div>
 
-      <p className="text-base-color text-xl mb-4">
+      <p className="text-content-primary text-base mb-4">
         {item.title}
         <Link href="/blogs/64854564231231">
-          <span className="text-secondary-color font-semibold hover:underline">
+          <span className="text-accent font-semibold hover:text-accent-strong hover:underline underline-offset-4">
             Read More...
           </span>
         </Link>

@@ -44,35 +44,32 @@ const AcademicRecords = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
-    <motion.div
-      ref={ref}
-      className="overflow-hidden pt-20 pb-10 bg-highlight-color"
-    >
+    <motion.div ref={ref} className="overflow-hidden pt-24 pb-16">
       <Container>
         <div className="">
           <div className="mb-10 sm:mb-12 lg:mb-16">
             <Revel delay={0}>
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-semibold text-secondary-color mb-7">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl text-content-secondary tracking-display mb-7">
                 Academic Records
               </h1>
             </Revel>
             <Revel delay={0}>
-              <p className="text-sm lg:text-base xl:text-lg text-base-color w-full sm:w-[90%] lg:w-[80%]  xl:w-[80%] text-start">
+              <p className="text-sm lg:text-base text-content-muted w-full sm:w-[90%] lg:w-[80%]  xl:w-[80%] text-start">
                 I have completed my academic education from different reputed
                 institutions. Here are my academic records.
               </p>
             </Revel>
           </div>
-          <div className="px-10 sm:ps-12 lg:ps-14 border-s border-secondary-color w-full">
+          <div className="px-10 sm:ps-12 lg:ps-14 border-s border-accent/40 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
               {records.map((item, index) => (
                 <div key={index} className=" mb-10">
                   <Revel delay={0.1}>
-                    <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-secondary-color ">
+                    <h2 className="text-lg sm:text-xl font-semibold text-content-secondary ">
                       {item.title}
                     </h2>
                   </Revel>
-                  <ul className="text-sm lg:text-base  text-base-color w-full sm:w-[90%] lg:w-[80%]  xl:w-[80%] mt-3 text-start list-disc list-inside">
+                  <ul className="text-sm  text-content-muted w-full sm:w-[90%] lg:w-[80%]  xl:w-[80%] mt-3 text-start list-disc list-inside marker:text-accent/70">
                     <Revel delay={0.2}>
                       <li className="list-disc list-inside space-y-2">
                         Institute: {item.institute}
@@ -94,7 +91,7 @@ const AcademicRecords = () => {
                       <Link
                         href={item.certificate}
                         target={"_blank"}
-                        className="hover:underline text-secondary-color px-1"
+                        className="text-sm text-accent hover:text-accent-strong underline decoration-accent/40 hover:decoration-accent-strong underline-offset-4 transition-colors duration-300 px-1"
                       >
                         View certificate
                       </Link>

@@ -73,14 +73,14 @@ const techSkills = [
   {
     id: 11,
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Android_Studio_Logo_2024.svg/800px-Android_Studio_Logo_2024.svg.png",
+      "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-studio-icon.png",
     skillName: "Android Studio",
     percentage: 90,
   },
   {
     id: 12,
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Jira_Logo.svg/640px-Jira_Logo.svg.png",
+      "https://w7.pngwing.com/pngs/992/738/png-transparent-jira-hd-logo-thumbnail.png",
     skillName: "JIRA",
     percentage: 90,
   },
@@ -101,7 +101,7 @@ const techSkills = [
   {
     id: 15,
     image:
-      "https://www.techzine.eu/wp-content/uploads/2022/09/1768.sql_logo-768x461.jpg",
+      "https://e7.pngegg.com/pngimages/424/702/png-clipart-microsoft-sql-server-database-microsoft-corporation-application-software-sql-logo-angle-triangle.png",
     skillName: "SQL Server",
     percentage: 95,
   },
@@ -147,7 +147,7 @@ const softSkills = [
   {
     id: 3,
     image:
-      "https://media.licdn.com/dms/image/C5612AQGXpSUZqSBL_Q/article-cover_image-shrink_600_2000/0/1528976925525?e=2147483647&v=beta&t=hkSt7lI4t_YK3qNavqPpQIm26N1XQEuz04Fjj0B9ZOY",
+      "https://img.magnific.com/free-vector/keyword-research-illustration_335657-4664.jpg?semt=ais_hybrid&w=740&q=80",
     skillName: "Attention to Detail",
     percentage: 90,
   },
@@ -162,9 +162,9 @@ const softSkills = [
 
 const Skills = () => {
   return (
-    <div className="py-20 bg-background-color overflow-hidden">
+    <div className="py-24 overflow-hidden">
       <div className="mb-10 flex justify-center items-center flex-col">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl  font-bold place-items-start text-secondary-color mb-5">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl  place-items-start text-content-secondary tracking-display mb-5 text-center px-4">
           My Expertise Skills
         </h1>
 
@@ -173,7 +173,7 @@ const Skills = () => {
       <Container>
         <div>
           <div className=" mt-20">
-            <h1 className="text-3xl font-bold place-items-start text-base-color">
+            <h1 className="text-xl sm:text-2xl place-items-start text-accent tracking-display">
               Tools & Technologies :
             </h1>
             <div>
@@ -181,7 +181,7 @@ const Skills = () => {
             </div>
           </div>
           <div className=" mt-20">
-            <h1 className="text-3xl font-bold place-items-start text-base-color">
+            <h1 className="text-xl sm:text-2xl place-items-start text-accent tracking-display">
               Programming Language :
             </h1>
             <div>
@@ -190,7 +190,7 @@ const Skills = () => {
           </div>
 
           <div className=" mt-20">
-            <h1 className="text-3xl font-bold place-items-start text-base-color">
+            <h1 className="text-xl sm:text-2xl place-items-start text-accent tracking-display">
               Soft Skills:
             </h1>
             <div>

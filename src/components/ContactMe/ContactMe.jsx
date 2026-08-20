@@ -34,9 +34,9 @@ const ContactMe = () => {
 
   const inView = useInView(view);
   return (
-    <div className="py-20 bg-background-color text-base-color">
+    <div className="py-24 text-content-primary">
       <div className="mb-10 flex justify-center items-center flex-col">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl  font-bold place-items-start text-secondary-color mb-5">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl  place-items-start text-content-secondary tracking-display mb-5 text-center px-4">
           Contact With Me
         </h1>
 
@@ -53,7 +53,7 @@ const ContactMe = () => {
             <ContactMeCard />
           </motion.div>
           <motion.div variants={introChildren}>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl text-center mb-10 font-bold place-items-start text-secondary-color">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl text-center mb-10 place-items-start text-accent tracking-display px-4">
               Get In Touch
             </h1>
           </motion.div>

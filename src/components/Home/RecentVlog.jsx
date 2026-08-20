@@ -58,13 +58,13 @@ const RecentVlog = () => {
   return (
     <motion.div ref={ref} className=" overflow-hidden">
       <div className="mb-10 flex justify-center items-center flex-col">
-        <h1 className="text-5xl sm:text-6xl mb-2 font-bold place-items-start text-base-color/10">
+        <h1 className="text-5xl sm:text-6xl mb-2 place-items-start text-content-primary/10 tracking-display">
           Blog
         </h1>
-        <p className="text-secondary-color font-bold mb-3 text-2xl sm:text-3xl  -mt-12 sm:-mt-[54px]">
+        <p className="text-accent font-semibold mb-3 text-2xl sm:text-3xl  -mt-12 sm:-mt-[54px]">
           Recent Blog!
         </p>
-        <div className="w-48 h-1 bg-base-color rounded mx-auto"></div>
+        <div className="w-48 h-px rule-fade rounded mx-auto"></div>
       </div>
       <Container>
         <motion.div
@@ -104,10 +104,10 @@ const RecentVlog = () => {
               ))}
             </Swiper>
             {/* Custom Navigation Buttons */}
-            <div className="custom-prev select-none  absolute top-[100%] right-28 z-10 cursor-pointer text-secondary-color bg-[#E6E7E6] rounded-full p-1 -mt-[40px]">
+            <div className="custom-prev select-none  absolute top-[100%] right-28 z-10 cursor-pointer text-accent hover:text-content-inverse hover:bg-accent bg-surface-raised border border-line-subtle transition-colors duration-300 rounded-full p-1 -mt-[40px]">
               <MdKeyboardArrowLeft className="size-8" />
             </div>
-            <div className="custom-next select-none  absolute top-[100%] right-10 z-10 cursor-pointer text-secondary-color bg-[#E6E7E6] rounded-full p-1 -mt-[40px]">
+            <div className="custom-next select-none  absolute top-[100%] right-10 z-10 cursor-pointer text-accent hover:text-content-inverse hover:bg-accent bg-surface-raised border border-line-subtle transition-colors duration-300 rounded-full p-1 -mt-[40px]">
               <MdKeyboardArrowRight className="size-8" />
             </div>
           </div>

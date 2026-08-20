@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense } from "react";
+import React from "react";
 import Container from "../ui/Container";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -27,7 +27,7 @@ const intro = {
 };
 
 const introChildren = {
-  hidden: { opacity: 0, y: -200 },
+  hidden: { opacity: 0, y: -20 },
   visible: {
     opacity: 1,
     y: 0,
@@ -35,172 +35,135 @@ const introChildren = {
   },
 };
 
-const icon = {
-  hidden: {
-    opacity: 0,
-    pathLength: 0,
-    fill: "rgba(255, 255, 255, 0)",
-  },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
-  },
-};
-const icon2 = {
-  hidden: {
-    opacity: 0,
-    pathLength: 0,
-    fill: "rgba(255, 255, 255, 0)",
-  },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
-    fill: "#12103E",
-  },
-};
-
-
-
 const Banner = () => {
-
   const resumeUrl = getResumeUrl();
 
-
   return (
-    <div className="bg-background-color w-full py-20 min-h-[100vh] overflow-hidden flex flex-col items-center justify-center">
+    <div className="relative w-full py-20 min-h-[100vh] overflow-hidden flex flex-col items-center justify-center">
       <Container>
-        <div className=" lg:mt-10 xl:mt-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center justify-items-center w-full h-full gap-10 mt-5 lg:mt-0">
-            <div>
-              <motion.div variants={intro} initial="hidden" animate="visible">
-                <Revel delay={0}>
-                  <motion.h1
-                    variants={introChildren}
-                    className="text-3xl lg:text-4xl xl:text-5xl text-base-color mb-2 md:mb-4"
+        <div className="relative z-10 w-full h-full flex flex-col items-center justify-center mt-5 lg:mt-0">
+          <motion.div
+            variants={intro}
+            initial="hidden"
+            animate="visible"
+            className="flex flex-col items-center text-center w-full"
+          >
+            <Revel delay={0}>
+              <motion.h1
+                variants={introChildren}
+                className="text-4xl lg:text-6xl xl:text-7xl text-base-color mb-6 tracking-display font-display"
+              >
+                <span className="block text-sm lg:text-base text-secondary-color tracking-eyebrow mb-4 opacity-80 uppercase font-sans">
+                  I&apos;M
+                </span>
+                <span className="uppercase font-extrabold text-base-color">
+                  Sahid Hossain
+                </span>
+              </motion.h1>
+            </Revel>
+
+            <Revel delay={0}>
+              <motion.h3
+                variants={introChildren}
+                className="text-lg lg:text-2xl text-base-color font-semibold mb-6"
+              >
+                I am a
+                <span className="text-secondary-color ml-2">
+                  <Typewriter
+                    words={["Sr. SQA Engineer"]}
+                    loop={100}
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                  />
+                </span>
+              </motion.h3>
+            </Revel>
+
+            <Revel delay={0}>
+              <motion.p
+                variants={introChildren}
+                className="text-base-color/60 text-sm lg:text-base max-w-[750px] leading-relaxed mx-auto px-4 lg:px-0"
+              >
+                I am a dedicated and results-driven professional with a robust
+                academic background in Enterprise System Analysis & Design
+                (C#.Net) and a Master’s degree in Business Studies. Leveraging
+                extensive experience as a Software Quality Assurance Engineer, I
+                excel in conducting comprehensive end-to-end testing,
+                implementing effective test automation strategies, and ensuring
+                seamless system integration.
+                <br /> <br />
+                With a proven ability to collaborate with cross-functional
+                teams, communicate complex technical concepts with clarity, and
+                resolve critical issues efficiently, I bring both technical
+                expertise and a proactive problem-solving approach to every
+                project. I am passionate about delivering high-quality solutions
+                and am now seeking to contribute my skills to innovative,
+                growth-focused initiatives within a dynamic organization.
+              </motion.p>
+            </Revel>
+
+            <Revel delay={0}>
+              <motion.div variants={introChildren} className="mt-8">
+                <Link href={resumeUrl} target="_blank">
+                  <button
+                    className="bg-secondary-color text-primary-color px-8 py-3 text-sm font-bold tracking-wider duration-500 hover:bg-accent hover:text-secondary-color active:scale-[0.97] transition-all duration-200"
+                    // style={{
+                    //   clipPath: `polygon(
+                    //     0 0,
+                    //     calc(100% - 10px) 0,
+                    //     calc(100% - 10px) 5px,
+                    //     100% 5px,
+                    //     100% calc(100% - 5px),
+                    //     calc(100% - 10px) calc(100% - 5px),
+                    //     calc(100% - 10px) 100%,
+                    //     0 100%
+                    //   )`,
+                    // }}
                   >
-                    <span className="block md:inline-block"> I&apos;M</span>
-                    <span className="text-base-color font-extrabold">
-                      {" "}
-                      Sahid Hossain
-                    </span>
-                  </motion.h1>
-                </Revel>
-                <Revel delay={0}>
-                  <motion.h3
-                    variants={introChildren}
-                    className="text-xl lg:text-2xl text-base-color font-semibold mb-3 md:mb-5"
-                  >
-                    I am a
-                    <span className="text-base-color">
-                      {" "}
-                      <Typewriter
-                        words={["Sr. SQA Engineer"]}
-                        loop={100}
-                        cursor
-                        cursorStyle="_"
-                        typeSpeed={70}
-                        deleteSpeed={50}
-                        delaySpeed={1000}
-                      />
-                    </span>
-                  </motion.h3>
-                </Revel>{" "}
-                <Revel delay={0}>
-                  <motion.p
-                    variants={introChildren}
-                    className="text-base-color/60 text-sm"
-                  >
-                    I am a dedicated and results-driven professional with a
-                    robust academic background in Enterprise System Analysis &
-                    Design (C#.Net) and a Master’s degree in Business Studies.
-                    Leveraging extensive experience as a Software Quality
-                    Assurance Engineer, I excel in conducting comprehensive
-                    end-to-end testing, implementing effective test automation
-                    strategies, and ensuring seamless system integration.
-                    <br /> <br />
-                    With a proven ability to collaborate with cross-functional
-                    teams, communicate complex technical concepts with clarity,
-                    and resolve critical issues efficiently, I bring both
-                    technical expertise and a proactive problem-solving approach
-                    to every project. I am passionate about delivering
-                    high-quality solutions and am now seeking to contribute my
-                    skills to innovative, growth-focused initiatives within a
-                    dynamic organization.
-                  </motion.p>
-                </Revel>
-                <motion.div
-                  variants={introChildren}
-                  className="flex justify-start items-center gap-5 my-5"
-                >
-                  <Revel delay={0}>
-                    <Link href="https://github.com/Sahid000" target="_blank">
-                      <FaGithub className="text-secondary-color cursor-pointer  text-2xl" />
-                    </Link>
-                  </Revel>
-                  <Revel delay={0}>
-                    <Link
-                      href="https://www.linkedin.com/in/shahid06/"
-                      target="_blank"
-                    >
-                      <FaLinkedin className="text-secondary-color cursor-pointer text-2xl" />
-                    </Link>
-                  </Revel>
-                  <Revel delay={0}>
-                    <Link
-                      href="https://www.facebook.com/hassan.shahid.50/"
-                      target="_blank"
-                    >
-                      <FaFacebook className="text-secondary-color cursor-pointer  text-2xl" />
-                    </Link>
-                  </Revel>
-                  <Revel delay={0}>
-                    <Link
-                      href="https://www.instagram.com/hassan_shahid77/"
-                      target="_blank"
-                    >
-                      <FaInstagramSquare className="text-secondary-color cursor-pointer text-2xl" />
-                    </Link>
-                  </Revel>
-                </motion.div>
-                <Revel delay={0}>
-                  <motion.div variants={introChildren}>
-                    {" "}
-                    <Link
-                      href={resumeUrl}
-                      target="_blank"
-                    >
-                      <button className="bg-transparent border-2 border-secondary-color px-4 py-2 rounded mt-5 text-base-color hover:bg-secondary-color hover:border-secondary-color hover:text-primary-color duration-500">
-                        My Resume
-                      </button>
-                    </Link>
-                  </motion.div>
-                </Revel>
+                    My Resume
+                  </button>
+                </Link>
               </motion.div>
-            </div>
+            </Revel>
 
             <motion.div
-              className="mt-10 lg:mt-0  order-last"
-              initial={{ opacity: 0, x: 200 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                type: "spring",
-                bounce: 0.4,
-
-                duration: 3,
-              }}
+              variants={introChildren}
+              className="flex justify-center items-center gap-6 mt-12"
             >
-              <Suspense>
-                <video
-                  controls
-                  controlsList="nodownload"
-                  className=" w-full h-full rounded-lg shadow-md"
+              <Revel delay={0}>
+                <Link href="https://github.com/Sahid000" target="_blank">
+                  <FaGithub className="text-base-color hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
+                </Link>
+              </Revel>
+              <Revel delay={0}>
+                <Link
+                  href="https://www.linkedin.com/in/shahid06/"
+                  target="_blank"
                 >
-                  <source src="/video/banner.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </Suspense>
+                  <FaLinkedin className="text-base-color hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
+                </Link>
+              </Revel>
+              <Revel delay={0}>
+                <Link
+                  href="https://www.facebook.com/hassan.shahid.50/"
+                  target="_blank"
+                >
+                  <FaFacebook className="text-base-color hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
+                </Link>
+              </Revel>
+              <Revel delay={0}>
+                <Link
+                  href="https://www.instagram.com/hassan_shahid77/"
+                  target="_blank"
+                >
+                  <FaInstagramSquare className="text-base-color hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
+                </Link>
+              </Revel>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </div>

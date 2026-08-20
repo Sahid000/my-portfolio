@@ -27,15 +27,15 @@ const Accordion = ({ title, content, className }) => {
   return (
     <div
       className={cn(
-        "mb-5 bg-[#FEEBEA] duration-500 rounded shadow ",
+        "mb-5 bg-surface-raised border border-line-subtle transition-colors duration-instant rounded-2xl shadow-panel hover:border-accent/40 ",
         className
       )}
     >
       <div
-        className="flex justify-between items-center p-4 cursor-pointer  duration-500"
+        className="flex justify-between items-center p-5 cursor-pointer text-accent duration-instant"
         onClick={toggleAccordion}
       >
-        <h3 className="text-base-color text-xl font-semibold">{title}</h3>
+        <h3 className="text-content-secondary text-lg font-semibold">{title}</h3>
         {isOpen ? (
           <div>
             <HiMinus className="text-2xl duration-500" />
@@ -54,7 +54,7 @@ const Accordion = ({ title, content, className }) => {
           transition: "height 0.5s ease", // Smooth transition effect for height
         }}
       >
-        <div className="p-4 bg-[#FEEBEA] text-base-color duration-500 text-lg rounded-bl rounded-br">
+        <div className="px-5 pb-5 text-content-muted text-sm rounded-bl-2xl rounded-br-2xl">
           {content}
         </div>
       </div>
