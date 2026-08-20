@@ -158,8 +158,8 @@ module.exports = {
       },
 
       boxShadow: {
-        glow: "0 0 24px -4px rgba(217, 70, 239, 0.45)",
-        "glow-lg": "0 0 60px -12px rgba(217, 70, 239, 0.5)",
+        glow: "0 0 24px -4px rgb(var(--accent) / 0.45)",
+        "glow-lg": "0 0 60px -12px rgb(var(--accent) / 0.5)",
         panel: "0 24px 60px -30px rgba(0, 0, 0, 0.9)",
       },
     },

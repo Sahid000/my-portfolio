@@ -97,10 +97,10 @@ const Certifications = () => {
                   delay: index * 0.1,
                   ease: "easeOut",
                 }}
-                className="relative group h-full rounded-[24px] p-[1px] bg-gradient-to-b from-content-primary/10 to-transparent hover:from-accent/50 hover:to-accent/10 transition-all duration-instant shadow-panel hover:shadow-glow-lg"
+                className="relative group h-full rounded-[24px] p-[1px] bg-gradient-to-b from-content-primary/10 to-transparent hover:from-accent/50 hover:to-accent/10 transition-all duration-instant shadow hover:shadow-glow-lg"
               >
                 {/* Inner Card */}
-                <div className="relative h-full bg-surface-base/85 backdrop-blur-sm rounded-[23px] p-7 md:p-8 flex flex-col justify-between overflow-hidden">
+                <div className="relative h-full bg-surface-base dark:bg-transparent backdrop-blur-sm rounded-[23px] p-7 md:p-8 flex flex-col justify-between overflow-hidden">
                   {/* Decorative Glow Blob inside card */}
                   <div className="absolute -top-16 -right-16 w-32 h-32 bg-accent/10 rounded-full blur-2xl group-hover:bg-accent/25 group-hover:scale-150 transition-all duration-instant" />
 
@@ -127,7 +127,7 @@ const Certifications = () => {
                       </div>
                     </div>
 
-                    <h3 className="text-lg md:text-xl font-semibold text-content-secondary mb-3 group-hover:text-accent-strong transition-colors duration-300">
+                    <h3 className="text-lg md:text-xl font-semibold text-content-secondary mb-3 dark:group-hover:text-accent-strong group-hover:text-accent transition-colors duration-300">
                       {item.title}
                     </h3>
                     <p className="text-content-muted text-sm leading-relaxed mb-6">
