@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Sahid Hossain">
+  <!-- Palette mirrors the dark theme in globals.css: surface-base and accent. -->
+  <rect width="64" height="64" rx="14" fill="#080b12" />
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" fill="none" stroke="#22d3ee" stroke-opacity="0.28" stroke-width="1.5" />
+
+  <!-- Brackets sit dimmed behind the initial, as they do in the navbar wordmark.
+       The wordmark's closing slash is dropped: at 16px it merges into the
+       chevron and unbalances the mark. -->
+  <g fill="none" stroke="#f8fafc" stroke-opacity="0.5" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 23 L6.5 32 L13 41" />
+    <path d="M51 23 L57.5 32 L51 41" />
+  </g>
+
+  <!-- Monoline S, drawn as a path so no font has to be present to render it. -->
+  <g transform="translate(11.5 11.5) scale(0.41)" fill="none" stroke="#22d3ee" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M72 30 C72 16 28 14 28 34 C28 46 72 52 72 66 C72 86 28 84 28 70" />
+  </g>
+</svg>

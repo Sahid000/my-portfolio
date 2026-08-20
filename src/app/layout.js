@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
+import SmoothScroll from "@/components/ui/Animation/SmoothScroll";
 import { Michroma, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
@@ -31,7 +32,12 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body className={spaceGrotesk.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <SmoothScroll />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
           {children}
         </ThemeProvider>
       </body>
