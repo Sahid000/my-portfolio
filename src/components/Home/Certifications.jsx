@@ -209,7 +209,19 @@ const Certifications = () => {
                   <a
                     href={selectedCert.pdf}
                     download
-                    className="flex items-center gap-2 bg-accent text-content-inverse px-5 py-2.5 sm:px-6 sm:py-3 rounded-full font-semibold hover:bg-accent-strong transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5 text-sm"
+                    className="flex items-center gap-2 bg-accent text-btn-primary-text px-5 py-2.5 sm:px-6 sm:py-3 font-semibold hover:bg-btn-primary-hover transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5 text-sm"
+                    style={{
+                      clipPath: `polygon(
+                        0 0,
+                        calc(100% - 10px) 0,
+                        calc(100% - 10px) 5px,
+                        100% 5px,
+                        100% calc(100% - 5px),
+                        calc(100% - 10px) calc(100% - 5px),
+                        calc(100% - 10px) 100%,
+                        0 100%
+                      )`,
+                    }}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

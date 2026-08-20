@@ -109,19 +109,19 @@ const Banner = () => {
               <motion.div variants={introChildren} className="mt-8">
                 <Link href={resumeUrl} target="_blank">
                   <button
-                    className="bg-secondary-color text-primary-color px-8 py-3 text-sm font-bold tracking-wider duration-500 hover:bg-accent hover:text-secondary-color active:scale-[0.97] transition-all duration-200"
-                    // style={{
-                    //   clipPath: `polygon(
-                    //     0 0,
-                    //     calc(100% - 10px) 0,
-                    //     calc(100% - 10px) 5px,
-                    //     100% 5px,
-                    //     100% calc(100% - 5px),
-                    //     calc(100% - 10px) calc(100% - 5px),
-                    //     calc(100% - 10px) 100%,
-                    //     0 100%
-                    //   )`,
-                    // }}
+                    className="bg-accent text-btn-primary-text px-8 py-3 text-sm font-bold tracking-wider hover:bg-btn-primary-hover active:scale-[0.97] transition-all duration-200"
+                    style={{
+                      clipPath: `polygon(
+                        0 0,
+                        calc(100% - 10px) 0,
+                        calc(100% - 10px) 5px,
+                        100% 5px,
+                        100% calc(100% - 5px),
+                        calc(100% - 10px) calc(100% - 5px),
+                        calc(100% - 10px) 100%,
+                        0 100%
+                      )`,
+                    }}
                   >
                     My Resume
                   </button>
@@ -135,7 +135,7 @@ const Banner = () => {
             >
               <Revel delay={0}>
                 <Link href="https://github.com/Sahid000" target="_blank">
-                  <FaGithub className="text-base-color hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
+                  <FaGithub className="text-content-muted hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
                 </Link>
               </Revel>
               <Revel delay={0}>
@@ -143,7 +143,7 @@ const Banner = () => {
                   href="https://www.linkedin.com/in/shahid06/"
                   target="_blank"
                 >
-                  <FaLinkedin className="text-base-color hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
+                  <FaLinkedin className="text-content-muted hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
                 </Link>
               </Revel>
               <Revel delay={0}>
@@ -151,7 +151,7 @@ const Banner = () => {
                   href="https://www.facebook.com/hassan.shahid.50/"
                   target="_blank"
                 >
-                  <FaFacebook className="text-base-color hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
+                  <FaFacebook className="text-content-muted hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
                 </Link>
               </Revel>
               <Revel delay={0}>
@@ -159,7 +159,7 @@ const Banner = () => {
                   href="https://www.instagram.com/hassan_shahid77/"
                   target="_blank"
                 >
-                  <FaInstagramSquare className="text-base-color hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
+                  <FaInstagramSquare className="text-content-muted hover:text-accent duration-500 transition-colors duration-300 cursor-pointer text-2xl" />
                 </Link>
               </Revel>
             </motion.div>

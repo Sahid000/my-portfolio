@@ -30,25 +30,7 @@ function addVariablesForColors({ addBase, theme }) {
  * semi-transparent so the backdrop glow reads through them. Do not add opacity
  * modifiers (`/50`) to those — they already carry alpha.
  */
-const tokens = {
-  surfaceBase: "#05060a",
-  surfaceMuted: "rgba(11, 15, 23, 0.86)", /* #0B0F17 */
-  surfaceRaised: "rgba(17, 24, 39, 0.88)", /* #111827 */
-  surfaceOverlay: "#0f172a",
-
-  contentPrimary: "#f8fafc",
-  contentSecondary: "#ffffff",
-  contentMuted: "#94a3b8",
-
-  borderDefault: "#1e293b",
-  borderSubtle: "#172033",
-
-  accent: "#22d3ee",
-  accentSoft: "#8b5cf6",
-  accentStrong: "#67e8f9",
-
-  danger: "#f43f5e",
-};
+const tokens = {}; // Tokens are now in globals.css
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -118,38 +100,55 @@ module.exports = {
       },
 
       colors: {
+        btn: {
+          'primary-hover': 'var(--btn-primary-hover)',
+          'primary-text': 'var(--btn-primary-text)',
+        },
         surface: {
-          base: tokens.surfaceBase,
-          muted: tokens.surfaceMuted,
-          raised: tokens.surfaceRaised,
-          overlay: tokens.surfaceOverlay,
+          base: 'var(--surface-base)',
+          muted: 'var(--surface-muted)',
+          raised: 'var(--surface-raised)',
+          overlay: 'var(--surface-overlay)',
         },
         content: {
-          primary: tokens.contentPrimary,
-          secondary: tokens.contentSecondary,
-          muted: tokens.contentMuted,
-          inverse: tokens.surfaceBase,
+          primary: 'var(--content-primary)',
+          secondary: 'var(--content-secondary)',
+          muted: 'var(--content-muted)',
+          subtle: 'var(--content-subtle)',
+          inverse: 'var(--content-inverse)',
+        },
+        border: {
+          default: 'var(--border-default)',
+          subtle: 'var(--border-subtle)',
+          strong: 'var(--border-strong)',
         },
         accent: {
-          DEFAULT: tokens.accent,
-          soft: tokens.accentSoft,
-          strong: tokens.accentStrong,
+          DEFAULT: 'rgb(var(--accent))',
+          soft: 'rgb(var(--accent-soft))',
+          cyan: 'rgb(var(--accent-cyan))',
+          strong: 'var(--accent-strong)',
+          surface: 'var(--accent-surface)',
+          'surface-soft': 'var(--accent-surface-soft)',
+        },
+        ink: {
+          DEFAULT: 'var(--ink)',
+          soft: 'var(--ink-soft)'
         },
         line: {
-          DEFAULT: tokens.borderDefault,
-          subtle: tokens.borderSubtle,
+          DEFAULT: 'var(--border-default)',
+          subtle: 'var(--border-subtle)',
         },
 
-        // ---- Legacy aliases, re-pointed at the tokens above ----
-        "primary-color": "#05060A",
-        "background-color": "#05060A",
-        "secondary-color": "#ffffff",
-        "base-color": "#F8FAFC",
-        "anchor-color": "#ffffff",
-        "highlight-color": "#0B0F17",
-        "border-color": "#1e293b",
-        "error-color": "#F5382C",
-        "input-color": "#1e293b",
+        // ---- Legacy aliases, re-pointed at the semantic tokens ----
+        "primary-color": "var(--surface-base)",
+        "background-color": "var(--surface-base)",
+        "secondary-color": "var(--content-secondary)",
+        "base-color": "var(--content-primary)",
+        "anchor-color": "var(--content-primary)",
+        "highlight-color": "var(--surface-muted)",
+        "border-color": "var(--border-default)",
+        "error-color": "#F43F5E",
+        "input-color": "var(--surface-muted)",
       },
 
       backgroundImage: {

@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { Michroma, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
@@ -27,8 +28,13 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${michroma.variable} ${spaceGrotesk.variable}`}
+      suppressHydrationWarning
     >
-      <body className={spaceGrotesk.className}>{children}</body>
+      <body className={spaceGrotesk.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

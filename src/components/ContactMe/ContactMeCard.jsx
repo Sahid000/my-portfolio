@@ -1,7 +1,7 @@
 const ContactMeCard = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center my-20">
-      <div className="group flex justify-center items-center flex-col gap-3 text-center bg-surface-raised hover:bg-accent  border border-line-subtle hover:border-accent p-7 rounded-2xl transition-all duration-instant hover:shadow-glow">
+      <div className="group flex justify-center items-center flex-col gap-3 text-center pixel-card hover:bg-accent hover:border-accent p-7 transition-all duration-instant hover:shadow-glow">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"
@@ -28,7 +28,7 @@ const ContactMeCard = () => {
           +8801677266742
         </p>
       </div>
-      <div className="group flex justify-center items-center flex-col gap-3 text-center bg-surface-raised hover:bg-accent  border border-line-subtle hover:border-accent p-7 rounded-2xl transition-all duration-instant hover:shadow-glow">
+      <div className="group flex justify-center items-center flex-col gap-3 text-center pixel-card hover:bg-accent hover:border-accent p-7 transition-all duration-instant hover:shadow-glow">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"
@@ -56,7 +56,7 @@ const ContactMeCard = () => {
           Dhaka, Bangladesh
         </p>
       </div>
-      <div className="group flex justify-center items-center flex-col gap-3 text-center bg-surface-raised hover:bg-accent  border border-line-subtle hover:border-accent p-7 rounded-2xl transition-all duration-instant hover:shadow-glow">
+      <div className="group flex justify-center items-center flex-col gap-3 text-center pixel-card hover:bg-accent hover:border-accent p-7 transition-all duration-instant hover:shadow-glow">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"

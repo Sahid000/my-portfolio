@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container";
 import { getResumeUrl } from "@/utils/getEnviromentVariable";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
+import ThemeSwitcher from "./ThemeSwitcher";
 import { useState } from "react";
 
  const NavItems = [
@@ -113,18 +114,34 @@ const resumeUrl = getResumeUrl();
               </ul>
             </div>
           </nav>
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-4">
+            <ThemeSwitcher />
             <Link
               href={resumeUrl}
               target="_blank"
             >
-              <button className="!text-xs text-nowrap border px-5 py-2 rounded-full bg-accent border-accent text-content-inverse font-semibold tracking-wide duration-instant transition-all hover:bg-accent-strong hover:border-accent-strong hover:shadow-glow active:scale-[0.97]">
+              <button 
+                className="!text-xs text-nowrap border px-5 py-2 bg-accent border-accent text-btn-primary-text font-semibold tracking-wide transition-all hover:bg-btn-primary-hover hover:border-btn-primary-hover hover:shadow-glow active:scale-[0.97]"
+                style={{
+                  clipPath: `polygon(
+                    0 0,
+                    calc(100% - 10px) 0,
+                    calc(100% - 10px) 5px,
+                    100% 5px,
+                    100% calc(100% - 5px),
+                    calc(100% - 10px) calc(100% - 5px),
+                    calc(100% - 10px) 100%,
+                    0 100%
+                  )`,
+                }}
+              >
                 My Resume
               </button>
             </Link>
           </div>
           {/* //*Icons */}
-          <div className="lg:hidden select-none">
+          <div className="lg:hidden select-none flex items-center gap-2">
+            <ThemeSwitcher />
             {mobileMenuOpen ? (
               <button
                 type="button"

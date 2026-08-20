@@ -2,7 +2,7 @@ import React from "react";
 
 const ExperienceCard = ({ experience }) => {
   return (
-    <div className="group bg-surface-raised p-8 rounded-2xl border border-line-subtle text-content-primary transition-all duration-instant hover:border-accent/40 hover:shadow-glow">
+    <div className="group pixel-card p-8 text-content-primary transition-all duration-instant hover:border-accent/40 hover:shadow-glow">
       <h2 className="text-2xl font-semibold mb-2 text-content-secondary transition-colors duration-300 group-hover:text-accent-strong">
         {experience.company}
       </h2>

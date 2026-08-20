@@ -28,7 +28,7 @@ const SkillCard = ({ skill }) => {
       animate="animate"
       className="w-[120px] sm:w-[140px] text-center"
     >
-      <div className="w-[120px] sm:w-[140px] h-[200px] border border-white/10 hover:border-accent/40 rounded-full flex justify-center items-center flex-col bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-instant text-accent hover:text-content-secondary hover:shadow-glow shadow-xl">
+      <div className="w-[120px] sm:w-[140px] h-[200px] border border-line-subtle hover:border-accent rounded-full flex justify-center items-center flex-col bg-surface-raised/50 hover:bg-accent/10 transition-all duration-instant text-accent hover:shadow-glow ">
         <Image
           src={skill?.image}
           alt="skill-image"

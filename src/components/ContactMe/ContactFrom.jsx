@@ -129,7 +129,21 @@ const ContactFrom = () => {
           />
         </div>
         <div className=" mt-6 col-span-2">
-          <button className="w-full flex items-center justify-center gap-2 border px-6 py-3.5 rounded-full mt-5 text-sm font-semibold tracking-wide bg-accent border-accent text-content-inverse hover:bg-accent-strong hover:border-accent-strong hover:shadow-glow active:scale-[0.99] transition-all duration-instant">
+          <button 
+            className="w-full flex items-center justify-center gap-2 border px-6 py-3.5 mt-5 text-sm font-semibold tracking-wide bg-accent border-accent text-btn-primary-text hover:bg-btn-primary-hover hover:border-btn-primary-hover hover:shadow-glow active:scale-[0.99] transition-all duration-instant"
+            style={{
+              clipPath: `polygon(
+                0 0,
+                calc(100% - 10px) 0,
+                calc(100% - 10px) 5px,
+                100% 5px,
+                100% calc(100% - 5px),
+                calc(100% - 10px) calc(100% - 5px),
+                calc(100% - 10px) 100%,
+                0 100%
+              )`,
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

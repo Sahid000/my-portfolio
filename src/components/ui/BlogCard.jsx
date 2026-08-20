@@ -12,7 +12,7 @@ const BlogCard = ({ item }) => {
     <motion.div
       style={style}
       ref={componentRef}
-      className="bg-surface-raised  rounded-2xl shadow-panel p-4  hover:shadow-glow hover:border-accent/40 transition-all duration-instant border border-line-subtle"
+      className="pixel-card p-4 hover:shadow-glow hover:border-accent/40 transition-all duration-instant"
     >
       <Image
         src={item.image}

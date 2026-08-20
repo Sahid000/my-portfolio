@@ -27,7 +27,7 @@ const Accordion = ({ title, content, className }) => {
   return (
     <div
       className={cn(
-        "mb-5 bg-surface-raised border border-line-subtle transition-colors duration-instant rounded-2xl shadow-panel hover:border-accent/40 ",
+        "mb-5 pixel-card transition-colors duration-instant shadow-panel hover:border-accent/40 ",
         className
       )}
     >

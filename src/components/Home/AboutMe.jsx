@@ -84,7 +84,21 @@ const AboutMe = () => {
               href={resumeUrl}
               target="_blank"
             >
-              <button className="bg-transparent border border-accent/60 px-6 py-3 rounded-full mt-5 text-sm font-semibold tracking-wide hover:bg-accent text-accent hover:text-content-inverse hover:shadow-glow active:scale-[0.97] transition-all duration-instant">
+              <button 
+                className="bg-surface-raised text-content-primary border border-line-default px-6 py-3 mt-5 text-sm font-semibold tracking-wide hover:bg-surface-muted active:scale-[0.97] transition-all duration-200"
+                style={{
+                  clipPath: `polygon(
+                    0 0,
+                    calc(100% - 10px) 0,
+                    calc(100% - 10px) 5px,
+                    100% 5px,
+                    100% calc(100% - 5px),
+                    calc(100% - 10px) calc(100% - 5px),
+                    calc(100% - 10px) 100%,
+                    0 100%
+                  )`,
+                }}
+              >
                 My Resume
               </button>
             </Link>

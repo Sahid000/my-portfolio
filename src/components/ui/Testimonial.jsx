@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa6";
 
 const TestimonialCard = ({ item }) => {
   return (
-    <div className="flex flex-col md:flex-row justify-stretch items-center md:gap-5 xl:gap-10 bg-surface-raised border border-line-subtle rounded-2xl overflow-hidden text-content-primary p-7 md:p-0 ">
+    <div className="flex flex-col md:flex-row justify-stretch items-center md:gap-5 xl:gap-10 pixel-card overflow-hidden text-content-primary p-7 md:p-0">
       <Image
         src={item.image}
         alt="Testimonial"
