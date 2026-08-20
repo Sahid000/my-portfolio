@@ -9,37 +9,38 @@
      --------------------------------------------------------------- */
   :root {
     /* ============================================================
-       DIGITAL AURORA — LIGHT
+       DIGITAL AURORA ï¿½ LIGHT
        ============================================================ */
 
-    --surface-base: #F8FAFC;
-    --surface-muted: #F1F5F9;
-    --surface-raised: #FFFFFF;
-    --surface-overlay: #FFFFFF;
+    --surface-base: #f1f5f9;
+    --surface-muted: #e2e8f0;
+    --surface-raised: #ffffff;
+    --surface-overlay: #ffffff;
 
-    --content-primary: #0F172A;
+    --content-primary: #0f172a;
     --content-secondary: #020617;
     --content-muted: #475569;
-    --content-subtle: #64748B;
-    --content-inverse: #FFFFFF;
+    --content-subtle: #64748b;
+    --content-inverse: #ffffff;
 
-    --border-default: #E2E8F0;
-    --border-subtle: #EEF2F7;
-    --border-strong: #CBD5E1;
+    --border-default: #e2e8f0;
+    --border-subtle: #eef2f7;
+    --border-strong: #cbd5e1;
 
     --accent: 37 99 235;
     --accent-soft: 124 58 237;
     --accent-cyan: 6 182 212;
-    --accent-strong: #60A5FA;
-    --btn-primary-hover: #1D4ED8;
-    --btn-primary-text: #FFFFFF;
-    --accent-surface: #DBEAFE;
-    --accent-surface-soft: #EFF6FF;
+    --accent-strong: #22d3ee;
+    --btn-primary-hover: #1d4ed8;
+    --btn-primary-text: #ffffff;
+    --accent-surface: #dbeafe;
+    --accent-surface-soft: #eff6ff;
 
-    --ink: #0F172A;
-    --ink-soft: #1E293B;
-    --selection-bg: rgba(37, 99, 235, 0.20);
-    --selection-text: #0F172A;
+    --ink: #0f172a;
+    --ink-soft: #1e293b;
+    --grid-color: 15 23 42;
+    --selection-bg: rgba(37, 99, 235, 0.2);
+    --selection-text: #0f172a;
     --scrollbar-thumb: rgba(37, 99, 235, 0.45);
 
     --space-1: 4px;
@@ -47,47 +48,48 @@
     --duration-instant: 800ms;
     --card-bg: var(--surface-raised);
     --card-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
-    
+
     color-scheme: light;
   }
 
   .dark {
     /* ============================================================
-       DIGITAL AURORA — DARK
+       DIGITAL AURORA ï¿½ DARK
        ============================================================ */
 
-    --surface-base: #080B12;
-    --surface-muted: #0F172A;
-    --surface-raised: #151E2E;
+    --surface-base: #080b12;
+    --surface-muted: #0f172a;
+    --surface-raised: #151e2e;
     --surface-overlay: #111827;
 
-    --content-primary: #F8FAFC;
-    --content-secondary: #FFFFFF;
-    --content-muted: #CBD5E1;
-    --content-subtle: #94A3B8;
-    --content-inverse: #080B12;
+    --content-primary: #f8fafc;
+    --content-secondary: #ffffff;
+    --content-muted: #cbd5e1;
+    --content-subtle: #94a3b8;
+    --content-inverse: #080b12;
 
-    --border-default: #1E293B;
+    --border-default: #1e293b;
     --border-subtle: #172033;
     --border-strong: #334155;
 
-    --accent: 96 165 250;
+    --accent: 34 211 238;
     --accent-soft: 167 139 250;
     --accent-cyan: 34 211 238;
-    --accent-strong: #93C5FD;
-    --btn-primary-hover: #93C5FD;
-    --btn-primary-text: #080B12;
+    --accent-strong: #22d3ee;
+    --btn-primary-hover: #22d3ee;
+    --btn-primary-text: #080b12;
     --accent-surface: #172554;
-    --accent-surface-soft: #0F1B35;
+    --accent-surface-soft: #0f1b35;
 
-    --ink: #F8FAFC;
-    --ink-soft: #E2E8F0;
-    --selection-bg: rgba(96, 165, 250, 0.25);
-    --selection-text: #FFFFFF;
-    --scrollbar-thumb: rgba(96, 165, 250, 0.45);
+    --ink: #f8fafc;
+    --ink-soft: #e2e8f0;
+    --grid-color: 255 255 255;
+    --selection-bg: rgba(34, 211, 238, 0.25);
+    --selection-text: #ffffff;
+    --scrollbar-thumb: rgba(34, 211, 238, 0.45);
     --card-bg: var(--surface-muted);
     --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-    
+
     color-scheme: dark;
   }
 
@@ -95,9 +97,11 @@
     scroll-behavior: smooth;
   }
 
-
   * {
-    transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+    transition:
+      background-color 200ms ease,
+      border-color 200ms ease,
+      color 200ms ease;
   }
 
   body {
@@ -117,8 +121,8 @@
      the grotesk to protect readability and line length. */
   h1,
   .font-display {
-    font-family: var(--font-display), Michroma, ui-sans-serif, system-ui,
-      sans-serif;
+    font-family:
+      var(--font-display), Michroma, ui-sans-serif, system-ui, sans-serif;
     /* Michroma has a single weight. `font-synthesis: none` on body keeps the
        existing font-bold / font-extrabold utilities from faking a heavier cut;
        this just makes the intent explicit. */
@@ -147,7 +151,15 @@
      visible focus ring. --accent-strong (#f0abfc) sits at 10.6:1 on
      --surface-muted and 12:1 on --surface-base.
      --------------------------------------------------------------- */
-  :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  :where(
+    a,
+    button,
+    input,
+    textarea,
+    select,
+    summary,
+    [tabindex]
+  ):focus-visible {
     outline: 2px solid var(--accent-strong);
     outline-offset: 3px;
     border-radius: 4px;
@@ -212,53 +224,36 @@
    */
   .app-shell {
     background-color: var(--surface-base);
-    background-image:
-      linear-gradient(
-        rgba(37, 99, 235, 0.035) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        90deg,
-        rgba(37, 99, 235, 0.035) 1px,
-        transparent 1px
-      ),
-      radial-gradient(
-        circle at 15% 20%,
-        rgba(96, 165, 250, 0.16),
-        transparent 32%
-      ),
-      radial-gradient(
-        circle at 85% 15%,
-        rgba(167, 139, 250, 0.13),
-        transparent 30%
-      );
-    background-repeat: repeat, repeat, no-repeat, no-repeat;
-    background-size: 20px 20px, 20px 20px, 100% 100%, 100% 100%;
-    background-attachment: fixed;
-  }
 
-  .dark .app-shell {
-    background-color: var(--surface-base);
     background-image:
-      linear-gradient(
-        rgba(96, 165, 250, 0.035) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        90deg,
-        rgba(96, 165, 250, 0.035) 1px,
-        transparent 1px
+      radial-gradient(
+        55rem 45rem at 82% 5%,
+        rgb(var(--accent-soft) / 0.2),
+        transparent 65%
       ),
       radial-gradient(
-        circle at 15% 20%,
-        rgba(37, 99, 235, 0.16),
-        transparent 32%
+        48rem 42rem at 5% 35%,
+        rgb(var(--accent) / 0.12),
+        transparent 62%
       ),
       radial-gradient(
-        circle at 85% 15%,
-        rgba(124, 58, 237, 0.14),
-        transparent 30%
+        65rem 50rem at 60% 100%,
+        rgb(var(--accent-soft) / 0.12),
+        transparent 68%
+      ),
+      radial-gradient(
+        35rem 30rem at 50% 50%,
+        rgb(var(--accent) / 0.035),
+        transparent 70%
+      ),
+      repeating-linear-gradient(
+        115deg,
+        rgb(var(--grid-color) / 0.015) 0 1px,
+        transparent 1px 10px
       );
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   /* `background-attachment: fixed` repaints badly on mobile Safari/Chrome. */
@@ -304,13 +299,12 @@
 }
 
 @layer components {
-
   .pixel-card {
     background: var(--card-bg);
     border: 1px solid var(--border-default);
     box-shadow: var(--card-shadow);
   }
-  
+
   .pixel-corners {
     clip-path: polygon(
       0 10px,
@@ -327,5 +321,4 @@
       0 calc(100% - 10px)
     );
   }
-
 }

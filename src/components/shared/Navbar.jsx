@@ -7,16 +7,16 @@ import Link from "next/link";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { useState } from "react";
 
- const NavItems = [
-//   { id: "1", name: "Blogs", route: "/blogs" },
-//   { id: "2", name: "Projects", route: "/projects" },
- ];
+const NavItems = [
+  //   { id: "1", name: "Blogs", route: "/blogs" },
+  //   { id: "2", name: "Projects", route: "/projects" },
+];
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-const resumeUrl = getResumeUrl();
+  const resumeUrl = getResumeUrl();
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -116,25 +116,8 @@ const resumeUrl = getResumeUrl();
           </nav>
           <div className="hidden lg:flex items-center gap-4">
             <ThemeSwitcher />
-            <Link
-              href={resumeUrl}
-              target="_blank"
-            >
-              <button 
-                className="!text-xs text-nowrap border px-5 py-2 bg-accent border-accent text-btn-primary-text font-semibold tracking-wide transition-all hover:bg-btn-primary-hover hover:border-btn-primary-hover hover:shadow-glow active:scale-[0.97]"
-                style={{
-                  clipPath: `polygon(
-                    0 0,
-                    calc(100% - 10px) 0,
-                    calc(100% - 10px) 5px,
-                    100% 5px,
-                    100% calc(100% - 5px),
-                    calc(100% - 10px) calc(100% - 5px),
-                    calc(100% - 10px) 100%,
-                    0 100%
-                  )`,
-                }}
-              >
+            <Link href={resumeUrl} target="_blank">
+              <button className="!text-xs text-nowrap border px-5 py-2 bg-accent border-accent text-btn-primary-text font-semibold tracking-wide transition-all hover:bg-btn-primary-hover hover:border-btn-primary-hover hover:shadow-glow active:scale-[0.97]">
                 My Resume
               </button>
             </Link>

@@ -57,8 +57,8 @@ const Certifications = () => {
     <>
       <div className="relative overflow-hidden py-24 z-10">
         {/* Background Ambient Glows */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-soft/10 rounded-full blur-[120px] -z-10" />
-        <div className="absolute bottom-0 right-1/4 w-[30rem] h-[30rem] bg-accent/10 rounded-full blur-[120px] -z-10" />
+        {/* <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-soft/10 rounded-full blur-[120px] -z-10" />
+        <div className="absolute bottom-0 right-1/4 w-[30rem] h-[30rem] bg-accent/10 rounded-full blur-[120px] -z-10" /> */}
 
         <Container>
           <div className="mb-20 flex flex-col items-center justify-center text-center">

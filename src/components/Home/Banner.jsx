@@ -108,21 +108,7 @@ const Banner = () => {
             <Revel delay={0}>
               <motion.div variants={introChildren} className="mt-8">
                 <Link href={resumeUrl} target="_blank">
-                  <button
-                    className="bg-accent text-btn-primary-text px-8 py-3 text-sm font-bold tracking-wider hover:bg-btn-primary-hover active:scale-[0.97] transition-all duration-200"
-                    style={{
-                      clipPath: `polygon(
-                        0 0,
-                        calc(100% - 10px) 0,
-                        calc(100% - 10px) 5px,
-                        100% 5px,
-                        100% calc(100% - 5px),
-                        calc(100% - 10px) calc(100% - 5px),
-                        calc(100% - 10px) 100%,
-                        0 100%
-                      )`,
-                    }}
-                  >
+                  <button className="bg-accent text-btn-primary-text px-8 py-3 text-sm font-bold tracking-wider hover:bg-btn-primary-hover active:scale-[0.97] transition-all duration-200">
                     My Resume
                   </button>
                 </Link>
