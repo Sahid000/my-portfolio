@@ -6,9 +6,16 @@ import AnimatedUnderline from "../ui/Animation/AnimatedUnderline";
 
 const certifications = [
   {
+    title: "ISTQB",
+    description:
+      "International Software Testing Qualifications Board Certification",
+    year: "2026",
+    pdf: "/pdf/certification/ISTQB.pdf",
+  },
+  {
     title: "AI+ Prompt Engineer Level 1™",
     description: "Certification for AI Prompt Engineering",
-    year: "2024",
+    year: "2025",
     pdf: "/pdf/certification/AI+ Prompt Engineer Level 1™.pdf",
   },
   {
@@ -40,13 +47,6 @@ const certifications = [
     description: "Microsoft Specialist Certification",
     year: "2016",
     pdf: "/pdf/certification/Microsoft Specialist.pdf",
-  },
-  {
-    title: "ISTQB",
-    description:
-      "International Software Testing Qualifications Board Certification",
-    year: "2026",
-    pdf: "/pdf/certification/ISTQB.pdf",
   },
 ];
 
