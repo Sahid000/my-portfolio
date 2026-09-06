@@ -141,7 +141,7 @@ const Certifications = () => {
                       className="flex items-center gap-3 text-sm font-semibold text-content-primary group-hover:text-accent transition-colors duration-300 w-full"
                     >
                       <span className="relative">
-                        Preview Document
+                        Preview Certificate
                         <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
                       </span>
                       <svg
