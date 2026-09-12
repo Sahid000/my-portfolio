@@ -182,14 +182,14 @@ const Certifications = () => {
               backdropFilter: "blur(0px)",
               backgroundColor: "rgba(0,0,0,0)",
             }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-12"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-3 lg:p-6"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-5xl h-[90vh] sm:h-[85vh] bg-surface-overlay/95 backdrop-blur-xl border border-line-subtle rounded-3xl shadow-panel overflow-hidden flex flex-col"
+              className="relative w-full max-w-3xl h-[90vh] sm:h-[85vh] bg-surface-overlay/95 backdrop-blur-xl border border-line-subtle rounded-3xl shadow-panel overflow-hidden flex flex-col"
             >
               {/* Modal Decorative Glows */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[80px] -z-10" />
