@@ -74,21 +74,6 @@ const experience = [
       "Adolphus Tower",
     ],
   },
-  {
-  id: 5,
-  company: "IsDB-BISEW",
-  role: "Trainee - Enterprise Systems Analysis and Design - C#.NET",
-  date: "Aug 2015 - Dec 2016",
-  points: [
-    "Successfully completed a comprehensive 17-month professional training program covering Enterprise Systems Analysis and Design using C#.NET.",
-    "Developed a strong foundation in computer fundamentals, object-oriented programming, database design, web development, and enterprise application development.",
-    "Gained hands-on experience with C#.NET 4.5.1, Microsoft SQL Server 2012, UML, and Microsoft Visio.",
-    "Learned HTML5, JavaScript, CSS3, XML, and ASP.NET development.",
-    "Developed web applications using ASP.NET MVC 4 and gained exposure to Windows Azure and Web Services development.",
-    "Acquired practical experience in enterprise system design, web development, database implementation, and cloud services through structured project-based training."
-  ],
-  projects: [],
-},
 ];
 
 const Experience = () => {
