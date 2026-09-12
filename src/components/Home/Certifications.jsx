@@ -16,7 +16,7 @@ const certifications = [
     title: "AI+ Prompt Engineer Level 1™",
     description: "Certification for AI Prompt Engineering",
     year: "2025",
-    pdf: "/pdf/certification/AI+ Prompt Engineer Level 1™.pdf",
+    pdf: "/pdf/certification/AI-Prompt-Engineer-Level-1.pdf",
   },
   {
     title: "Professional Scrum MasterTM level I (PSM I)",
