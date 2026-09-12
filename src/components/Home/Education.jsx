@@ -11,6 +11,7 @@ const records = [
     institute: "IsDB-BISEW",
     year: "2015 - 2016",
     cgpa: "Microsoft Certified Solution Developer (MCSD)",
+    certificate: ""
   },
   {
     title: "Master in Business Studies - MBS in Accounting",
