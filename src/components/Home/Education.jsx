@@ -7,6 +7,12 @@ import Link from "next/link";
 
 const records = [
   {
+    title: "Diploma - Enterprise Systems Analysis & Design Using C#.NET",
+    institute: "IsDB-BISEW",
+    year: "2015 - 2016",
+    cgpa: "Microsoft Certified Solution Developer (MCSD)",
+  },
+  {
     title: "Master in Business Studies - MBS in Accounting",
     institute: "Khilgaon Model College",
     year: "2013",
